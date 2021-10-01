@@ -44,8 +44,8 @@ const Products = () => {
     discount,}])
   }
 
-  const buyProduct = (code) => {
-    setBuy([...buy, code])
+  const buyProduct = (product) => {
+    setBuy([...buy, product])
   }
 
     return(
@@ -75,7 +75,7 @@ const Products = () => {
                   <h4>{product.description}</h4>
                   <span>De R$ {product.price}</span>
                   <p>R$ {(product.price-product.discount).toFixed(2)}</p>
-                  <button type="button" onClick={() => buyProduct(product.code)}>Adicionar ao carrinho</button>
+                  <button type="button" onClick={() => buyProduct(product)}>Adicionar ao carrinho</button>
                 </li>
               ))}</ul>
             </div>
